@@ -1,7 +1,7 @@
 # LoginNextApps
 
 ## Description
-Login screen with mail and password validation
+Login screen with mail and password validations
 
 ### Installation
 
