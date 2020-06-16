@@ -1,0 +1,15 @@
+/* 
+  Localizable.strings
+  loginNextApps
+
+  Created by Matt on 12/06/2020.
+  Copyright © 2020 mindelicious. All rights reserved.
+*/
+
+"email_address" = "Adres Email";
+"enter_password" = "Wprowadź hasło";
+"login_introduction" = "Cześć %@. \nFajnie, Cię widzieć. Jeśli chcesz wyświetlić swoje hasło, tapnij przycisk poniżej. Pamiętaj aby nie dzielić sie hasłem z nikim!";
+"hide_password" = "Ukryj hasło";
+"show_password" = "Pokaż hasło";
+"login" = "Zaloguj się";
+"back" = "Wstecz";
