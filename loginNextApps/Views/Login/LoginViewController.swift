@@ -37,9 +37,12 @@ class LoginViewController: UIViewController {
         loginBtn.loading(true)
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.6) { [weak self] in
             self?.view.endEditing(true)
-            let detailVC = DetailViewController()
-            detailVC.viewModel = DetailViewModel(credentials: self!.viewModel.credentials)
-            self?.navigationController?.pushViewController(detailVC, animated: true)
+            if let credentials = self?.viewModel.credentials {
+                let detailVC = DetailViewController()
+                detailVC.viewModel = DetailViewModel(credentials: credentials)
+                self?.navigationController?.pushViewController(detailVC, animated: true)
+            }
+            
             self?.loginBtn.loading(false)
         }
     }
