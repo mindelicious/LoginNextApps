@@ -34,13 +34,13 @@ class LoginViewController: UIViewController {
     }
     
     @objc func loginBtnTapped(sender: UIButton) {
-        sender.pulse()
-        //delay zrobiony dlatego że wpisaniu loginu i hasła będą sprawdzane dane
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.6) {
-            self.view.endEditing(true)
+        loginBtn.loading(true)
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.6) { [weak self] in
+            self?.view.endEditing(true)
             let detailVC = DetailViewController()
-            detailVC.viewModel = DetailViewModel(credentials: self.viewModel.credentials)
-            self.navigationController?.pushViewController(detailVC, animated: true)
+            detailVC.viewModel = DetailViewModel(credentials: self!.viewModel.credentials)
+            self?.navigationController?.pushViewController(detailVC, animated: true)
+            self?.loginBtn.loading(false)
         }
     }
     
